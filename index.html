@@ -20,7 +20,10 @@
       <a class="navbar-brand" href="#">
         <img src="IMG/Atv_noticias_logo.png" alt="logo" style="width: 100px;">
       </a>
-
+      <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="🔍">
+        <button class="btn btn-success" type="submit">Buscar</button>
+      </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#" style="color: rgb(3, 3, 3);">Coronavirus</a>
@@ -57,7 +60,7 @@
     </div>
 
   
-    <div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
 
         <!-- Indicators -->
         <ul class="carousel-indicators">
@@ -70,17 +73,25 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <a href="index2.html">
-                <img src="IMG/cov.jpg" class="mx-auto d-block" alt="covid" width="1024" height="600">
+                <img src="IMG/cov.jpg" class="mx-auto d-block" alt="covid" width="1080" height="600">
+                <div class="carousel-caption">
+                  <h3>Covid-19</h3>
+                  <p>La situacion empeora cada dia</p>
+                </div>
             </a>    
           </div>
           <div class="carousel-item">
             <a href="index2.html">
-                <img src="IMG/chl.jpg"  class="mx-auto d-block" alt="chile" width="1024" height="600">
+                <img src="IMG/chl.jpg"  class="mx-auto d-block" alt="chile" width="1080" height="600">
+              <div class="carousel-caption">
+                <h3>Chile</h3>
+                <p>Se registran aun mas protestas en el pais</p>
+              </div>
             </a>    
           </div>
           <div class="carousel-item">
             <a href="index2.html">
-                <img src="IMG/nkr.jpg"  class="mx-auto d-block" alt="north-k" width="1024" height="600">
+                <img src="IMG/nkr.jpg"  class="mx-auto d-block" alt="north-k" width="1080" height="600">
                 <div class="carousel-caption">
                   <h3>Corea del Norte</h3>
                   <p>Se han mostrado los nuevos misiles de la dictadura</p>
