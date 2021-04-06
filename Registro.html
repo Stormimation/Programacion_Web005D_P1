@@ -8,39 +8,28 @@
     <title>Registro</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Registrarse</h1>
-        <form>
-            <div class="form-group">
-                <label for="Name"> Ingresa tu Nombre</label>
-                <input type="text" class="form-control" id="Name" >
-            </div>  
-
-            <div class="form-group">
-                <label for="Email"> Ingresa un Email</label>
-                <input type="text" class="form-control" id="Email" >
-            </div>  
-        
-            <div class="form-group"></div>
-                <label for="password"> Ingresa una contraseña</label>
-                <input type="text" class="form-control" id="password" >
-            </div>
-
-            <div class="form-group"></div>
-                <label for="Email"></label>
-                <div>
-                    <label for="Terminos" class="radio-inline">E leido y acepto los terminos de uso<input type="radio">
-
-                    </label>
+    <h1><p class="text-center">Registrarse</p></h1>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-setion">
+            <div class="modal-content">
+                <form class="col-12">
+                    <div class="form-group" id="user-group">
+                        <input type="text" class="form-control" placeholder="Nombre de Usuario"/> 
+                    </div>
+                    <div class="form-group" id="email-group">
+                        <input type="text" class="form-control" placeholder="Email"/> 
+                    </div>
+                    <div class="form-group" id="contrasena-group">
+                        <input type="text" class="form-control" placeholder="Ingrese una clave"/> 
+                    </div>
+                    <label class="radio-inline">E leido y acepto los terminos de uso<input type="radio"></label>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>Registrarse</button>
+                </form>
+                <div class="col-12 forgot">
+                    <a href="Ingreso.html">¿Ya tienes una cuenta,Inicia sesion aqui?</a>
                 </div>
-                
-            </div>
-
-            <button type="submit" class="btn btn-primary">Registrar</button>
-        </form>
+            </div>     
+        </div>       
     </div>
-
-    <h5>¿Se te olvido la contraseña? <br> ¿Ya tienes una cuenta, inicia sesion aqui? <button onclick="document.location='Ingreso.html'">Click aqui</button> </h5>
-    
 </body>
 </html>
