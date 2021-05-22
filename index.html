@@ -173,7 +173,7 @@
   
   <div class="container">            
     <div class="row">
-        <h1>Coordenadas usando api</h1>
+        <h1></h1>
     </div>
     <div class="row">
         <button id="boton1" class="btn btn-primary">Obtener Coordenadas</button>
@@ -189,11 +189,13 @@
                 <td>Ciudad</td>
                 <td>temp min</td>
                 <td>temp máx</td>
+                
             </tr>
 
         </table>
     </div>
-</div>    
+  </div>   
+
 </body>
 
 <script
@@ -208,12 +210,15 @@
  
  <script>
 
+
+   
+
  $(document).ready(function(){
 
     $("#boton1").click(
         function()
         {
-            alert("Hola!!");
+            alert("Bienvenido a Chaos News");
             getLocation();
         }
     );
@@ -234,10 +239,10 @@ function showPosition(position) {
     $("#longitud").html("Longitud: " + position.coords.longitude);
     $("#latitud").html("Latitud: " + position.coords.latitude);
 
-    $.get("http://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=b163a8065e354a8902d7489f3570b3a5",
+    $.get("http://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=a8c6e3adcb03c40cf8b1f793cf833930",
             function(data){
 
-                $("#tabla1").append("<tr><td>"+ data.name +"</td><td>"+data.main.temp_min+"</td><td>CCC</td></tr>");
+                $("#tabla1").append("<tr><td>"+ data.name +"</td><td>"+data.main.temp_min+"</td><td>"+data.main.temp_max);
 
             });
 
