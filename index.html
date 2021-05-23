@@ -188,7 +188,7 @@
                 <td>Latitud</td>
                 <td>Longitud</td>
                 <td>Clima</td>
-                
+                <td>Icono</td>
                 
             </tr>
 
@@ -228,10 +228,10 @@ function showPosition(position) {
     $("#longitud").html("Longitud: " + position.coords.longitude);
     $("#latitud").html("Latitud: " + position.coords.latitude);
 
-    $.get("http://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=a8c6e3adcb03c40cf8b1f793cf833930",
+    $.get("http://api.openweathermap.org/data/2.5/weather?lang=es&units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=a8c6e3adcb03c40cf8b1f793cf833930",
             function(data){
 
-                $("#tabla1").append("<tr><td>"+ data.name +"</td><td>"+data.main.temp_min+"</td><td>"+data.main.temp_max+"</td><td>"+ data.coord.lat +"</td><td>"+ data.coord.lon +"</td><td>"+"Clima"+"</td></tr>");
+                $("#tabla1").append("<tr><td>"+ data.name +"</td><td>"+data.main.temp_min+"</td><td>"+data.main.temp_max+"</td><td>"+ data.coord.lat +"</td><td>"+ data.coord.lon +"</td><td>"+ data.weather[0].description +"</td><td>"+ data.weather[0].icon +"</td></tr>");
 
             });
 
