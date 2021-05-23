@@ -176,11 +176,7 @@
         <h1></h1>
     </div>
     <div class="row">
-        <button id="boton1" class="btn btn-primary">Obtener Coordenadas</button>
-    </div>
-    <div class="row">
-        <span id="longitud"></span>
-        <span id="latitud"></span>
+        
     </div>
 
     <div class="row">
@@ -189,6 +185,10 @@
                 <td>Ciudad</td>
                 <td>temp min</td>
                 <td>temp máx</td>
+                <td>Latitud</td>
+                <td>Longitud</td>
+                <td>Clima</td>
+                
                 
             </tr>
 
@@ -213,18 +213,7 @@
 
    
 
- $(document).ready(function(){
-
-    $("#boton1").click(
-        function()
-        {
-            alert("Bienvenido a Chaos News");
-            getLocation();
-        }
-    );
-
-
-});
+ $(document).ready(function(){ {getLocation();}});
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -242,7 +231,7 @@ function showPosition(position) {
     $.get("http://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=a8c6e3adcb03c40cf8b1f793cf833930",
             function(data){
 
-                $("#tabla1").append("<tr><td>"+ data.name +"</td><td>"+data.main.temp_min+"</td><td>"+data.main.temp_max);
+                $("#tabla1").append("<tr><td>"+ data.name +"</td><td>"+data.main.temp_min+"</td><td>"+data.main.temp_max+"</td><td>"+ data.coord.lat +"</td><td>"+ data.coord.lon +"</td><td>"+"Clima"+"</td></tr>");
 
             });
 
