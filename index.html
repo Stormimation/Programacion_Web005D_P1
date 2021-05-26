@@ -80,6 +80,7 @@
               <td>URL</td>
               <td>ImagenURL</td>
               <td>Resumen</td>
+              <td>Fecha</td>
           </tr>
       </table>
   </div>
@@ -254,7 +255,7 @@ $("#boton1").click(function(){
     function(data){
 
         $.each(data, function(i, item){
-          $("#tabla2").append("<tr><td>"+ data[i].id +"</td><td>"+ data[i].title +"</td><td>"+ data[i].url +"</td><td>"+ data[i].imageUrl +"</td><td>"+ data[i].summary +"</td></tr>");
+          $("#tabla2").append("<tr><td>"+ data[i].id +"</td><td>"+ data[i].title +"</td><td>"+ data[i].url +"</td><td>"+ data[i].imageUrl +"</td><td>"+ data[i].summary +"</td><td>"+ data[i].publishedAt +"</td></tr>");
       
         });
       
