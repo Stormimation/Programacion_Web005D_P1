@@ -253,7 +253,10 @@ $("#boton1").click(function(){
   $.get("https://api.spaceflightnewsapi.net/v3/articles?_limit=3",
     function(data){
 
-        $("#tabla2").append("<tr><td>"+ data[1].id +"</td><td>"+ data[1].title +"</td><td>"+ data[1].url +"</td><td>"+ data[1].imageUrl +"</td><td>"+ data[1].summary +"</td></tr>");
+        $.each(data, function(i, item){
+          $("#tabla2").append("<tr><td>"+ data[i].id +"</td><td>"+ data[i].title +"</td><td>"+ data[i].url +"</td><td>"+ data[i].imageUrl +"</td><td>"+ data[i].summary +"</td></tr>");
+      
+        });
       
     });
 });
